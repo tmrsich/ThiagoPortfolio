@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.audio-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+.audio-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.audio-description {
+    font-size: 16px;
+    color: #555;
+}
