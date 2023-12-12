@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace; /* Classic early 2000s font */
+    font-family: "Courier New", Courier, monospace; /* Classic early 2000s font */
     background-color: #d3d3d3; /* Gray background */
     color: #333333; /* Dark text for better contrast */
     margin: 0;
@@ -33,3 +33,34 @@ audio {
     width: 100%; /* Full width of the container */
     outline: none; /* Removing outline for a clean look */
 }
+
+/* Existing CSS ... */
+
+.cd-image-container img,
+.rectangular-image-container img {
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Responsive sizing with media query */
+@media screen and (min-width: 768px) {
+    /* This will apply to screens larger than 768px wide */
+    .cd-image-container img {
+        max-width: 250px; /* Adjust the max-width as needed for desktop */
+    }
+
+    .rectangular-image-container img {
+        max-width: 300px; /* Adjust the max-width as needed for desktop */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* This will apply to screens smaller than 768px wide */
+    .cd-image-container img,
+    .rectangular-image-container img {
+        max-width: 90%; /* You can set a max-width for mobile as needed */
+    }
+}
+
