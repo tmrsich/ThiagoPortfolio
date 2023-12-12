@@ -1,16 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Classic early 2000s font */
+    background-color: #d3d3d3; /* Gray background */
+    color: #333333; /* Dark text for better contrast */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centering content */
 }
-.audio-container {
-    padding-top: 25px;
-    padding-bottom: 25px;
 
+.audio-container {
+    padding: 25px;
+    background-color: #f0f0f0; /* Slightly lighter gray for the container */
+    margin: 15px auto; /* Adding margin for spacing */
+    width: 80%; /* Controlling the width of the container */
+    border: 1px solid #cccccc; /* Border to give a distinct early 2000s feel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
+
 .audio-title {
-    font-size: 20px;
+    font-size: 24px; /* Slightly larger font size */
     font-weight: bold;
+    color: #2a2a2a; /* Darker color for the title */
 }
+
 .audio-description {
     font-size: 16px;
-    color: #555;
+    color: #555555; /* Adjusting the color for readability */
+    margin-bottom: 10px; /* Spacing before the audio player */
+}
+
+/* Adding styles for the audio player */
+audio {
+    width: 100%; /* Full width of the container */
+    outline: none; /* Removing outline for a clean look */
 }
