@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Courier New", Courier, monospace; /* Classic early 2000s font */
     background-color: #d3d3d3; /* Gray background */
@@ -7,12 +11,17 @@ body {
     text-align: center; /* Centering content */
 }
 
+.main-title {
+    margin: 10px auto -10px;
+}
+
 .audio-container {
     padding: 25px;
     background-color: #f0f0f0; /* Slightly lighter gray for the container */
     margin: 15px auto; /* Adding margin for spacing */
     width: 80%; /* Controlling the width of the container */
     border: 1px solid #cccccc; /* Border to give a distinct early 2000s feel */
+    border-radius: 10px; /* Border radius to give a more softer feel for each audio container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
@@ -35,13 +44,37 @@ audio {
 }
 
 /* Existing CSS ... */
+.cd-image-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 
-.cd-image-container img,
-.rectangular-image-container img {
+.cd-image-container img {
     display: block; /* Ensures the image is a block element */
-    margin: 0 auto; /* Centers the image */
     max-width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains the aspect ratio */
+    height: 150px; /* Maintains the aspect ratio */
+    animation: spin 30s infinite linear;
+    /* 3 second duration, infinite loop, alternate scaling with ease-in-out for a smoother effect */
+}
+
+.rectangular-image-container {
+    margin: 20px auto 0;
+}
+
+.text-container {
+    margin: auto; /* centers the div container relative to the body */
+    padding: 0 50px 25px; /* padding for appearance */
+    text-align: justify; /* Justified text for better appearance */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive sizing with media query */
@@ -72,8 +105,9 @@ a {
     font-size: 16px; /* Adjust size as needed */
     padding: 5px 10px; /* Spacing around the text */
     border: 2px solid #00ff00; /* Bright green border */
+    border-radius: 5px; /* Border radius to give a less rigid appearance */
     display: inline-block; /* Allows padding and margin */
-    margin: 5px; /* Spacing outside the border */
+    margin: 15px auto; /* Spacing outside the border */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
