@@ -12,7 +12,7 @@ body {
 }
 
 .main-title {
-    margin: 10px auto -10px;
+    margin: 10px auto 20px;
 }
 
 .audio-container {
@@ -46,7 +46,7 @@ audio {
 /* Existing CSS ... */
 .cd-image-container {
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 20px;
 }
 
@@ -80,8 +80,12 @@ audio {
 /* Responsive sizing with media query */
 @media screen and (min-width: 768px) {
     /* This will apply to screens larger than 768px wide */
+    .cd-image-container {
+        margin: 25px auto;
+    }
+
     .cd-image-container img {
-        max-width: 250px; /* Adjust the max-width as needed for desktop */
+        max-width: 250px;
     }
 
     .rectangular-image-container img {
@@ -91,7 +95,19 @@ audio {
 
 @media screen and (max-width: 767px) {
     /* This will apply to screens smaller than 768px wide */
-    .cd-image-container img,
+    .cd-image-container {
+        position: relative;
+        top: 10px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    
+    .cd-image-container img {
+        height: 75px;
+    }
+
     .rectangular-image-container img {
         max-width: 90%; /* You can set a max-width for mobile as needed */
     }
